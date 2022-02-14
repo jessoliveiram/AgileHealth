@@ -1,0 +1,25 @@
+{
+  "fields": [
+    {
+      "fieldName": "mode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "medicalSpecialty",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "start-form",
+  "processBpmnId": "ConsultProcess",
+  "processEntityName": "ConsultProcess",
+  "domainEntityName": "Consult",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "ConsultStartForm",
+  "changelogDate": "20220211000000",
+  "skipFakeData": true
+}

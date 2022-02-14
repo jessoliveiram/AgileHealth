@@ -1,0 +1,20 @@
+{
+  "agileHealthApp": {
+    "consult": {
+      "home": {
+        "title": "Consults",
+        "refreshListLabel": "Refresh list",
+        "notFound": "No Consults found"
+      },
+      "detail": {
+        "title": "Consult"
+      },
+      "id": "ID",
+      "mode": "Mode",
+      "medicalSpecialty": "Medical Specialty",
+      "local": "Local",
+      "doctorName": "Doctor Name",
+      "date": "Date"
+    }
+  }
+}

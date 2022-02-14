@@ -1,0 +1,12 @@
+
+entity Consult {
+    mode String
+    medicalSpecialty String
+    local String
+    doctorName String
+    date LocalDate
+}
+
+dto * with mapstruct
+
+service * with serviceClass

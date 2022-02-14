@@ -1,0 +1,58 @@
+{
+  "generator-jhipster": {
+    "skipJhipsterDependencies": true,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-agilekip",
+        "version": "0.0.12"
+      }
+    ],
+    "otherModules": [
+      {
+        "name": "generator-jhipster-agilekip",
+        "version": "0.0.12"
+      }
+    ],
+    "applicationType": "monolith",
+    "baseName": "agileHealth",
+    "jhipsterVersion": "7.0.1",
+    "skipClient": false,
+    "skipServer": false,
+    "skipUserManagement": false,
+    "skipCheckLengthOfIdentifier": false,
+    "skipFakeData": false,
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "testFrameworks": [],
+    "pages": [],
+    "creationTimestamp": 1644807972341,
+    "serviceDiscoveryType": false,
+    "reactive": false,
+    "authenticationType": "jwt",
+    "packageName": "br.ufrj.agilehealth",
+    "serverPort": "8080",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "buildTool": "maven",
+    "serverSideOptions": [],
+    "websocket": false,
+    "searchEngine": false,
+    "messageBroker": false,
+    "enableSwaggerCodegen": false,
+    "clientFramework": "vue",
+    "withAdminUi": true,
+    "clientTheme": "none",
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "packageFolder": "br/ufrj/agilehealth",
+    "jwtSecretKey": "ODdiMjI2N2E5YmIyMDZkMWQ2M2NmMTFhNDhkMGI3NTk4ZjVlNTBhM2NmNjZlMTI4YzY5YjZiZGI5ZTE0YmIxNDJiYTRmMTc2OGFiYmJkMGQwYmFhNmU0ZmFlNjk5MTQ5ZjMwOGNhYmNlMjcwNWNhY2QyZTRmNjNlNzE0YjNjMDM=",
+    "clientPackageManager": "npm",
+    "clientThemeVariant": "",
+    "languages": ["pt-br", "en"],
+    "entities": ["Consult"]
+  }
+}

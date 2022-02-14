@@ -1,0 +1,28 @@
+{
+  "agileHealthApp": {
+    "consultProcess": {
+      "home": {
+        "title": "Consult Processes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Consult Process",
+        "createOrEditLabel": "Create or edit a Consult Process",
+        "notFound": "No Consult Processes found"
+      },
+      "created": "A new Consult Process is created with identifier {{ param }}",
+      "updated": "A Consult Process is updated with identifier {{ param }}",
+      "deleted": "A Consult Process is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Consult Process {{ id }}?"
+      },
+      "detail": {
+        "title": "Consult Process"
+      },
+      "id": "ID",
+      "mode": "Mode",
+      "medicalSpecialty": "Medical Specialty",
+      "local": "Local",
+      "doctorName": "Doctor Name",
+      "date": "Date"
+    }
+  }
+}

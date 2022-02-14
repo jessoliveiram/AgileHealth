@@ -1,0 +1,36 @@
+{
+  "fields": [
+    {
+      "fieldName": "mode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "medicalSpecialty",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "local",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "doctorName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [],
+  "entityType": "process-binding",
+  "processBpmnId": "ConsultProcess",
+  "domainEntityName": "Consult",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "ConsultProcess",
+  "changelogDate": "20220211000000",
+  "skipFakeData": true
+}

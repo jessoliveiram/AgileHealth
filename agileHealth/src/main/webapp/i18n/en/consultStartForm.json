@@ -1,0 +1,25 @@
+{
+  "agileHealthApp": {
+    "consultStartForm": {
+      "home": {
+        "title": "Consult Start Forms",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Consult Start Form",
+        "createOrEditLabel": "Create or edit a Consult Start Form",
+        "notFound": "No Consult Start Forms found"
+      },
+      "created": "A new Consult Start Form is created with identifier {{ param }}",
+      "updated": "A Consult Start Form is updated with identifier {{ param }}",
+      "deleted": "A Consult Start Form is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Consult Start Form {{ id }}?"
+      },
+      "detail": {
+        "title": "Consult Start Form"
+      },
+      "id": "ID",
+      "mode": "Mode",
+      "medicalSpecialty": "Medical Specialty"
+    }
+  }
+}

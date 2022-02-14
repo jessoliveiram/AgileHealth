@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1fhsz3q" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:process id="ConsultProcess" name="Consult Process" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_15ruk9h</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_15ruk9h" sourceRef="StartEvent_1" targetRef="Activity_0dv75py" />
+    <bpmn:sequenceFlow id="Flow_1pbey2g" sourceRef="Activity_0dv75py" targetRef="Activity_1sk4fef" />
+    <bpmn:sequenceFlow id="Flow_0y9df04" sourceRef="Activity_1sk4fef" targetRef="Activity_1o0ahcj" />
+    <bpmn:sequenceFlow id="Flow_0lgrxi9" sourceRef="Activity_1o0ahcj" targetRef="Activity_0ostvml" />
+    <bpmn:sequenceFlow id="Flow_1ep3qvj" sourceRef="Activity_0ostvml" targetRef="Activity_0vhuo2l" />
+    <bpmn:endEvent id="Event_08rj28n">
+      <bpmn:incoming>Flow_13e8e1o</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_13e8e1o" sourceRef="Activity_0vhuo2l" targetRef="Event_08rj28n" />
+    <bpmn:userTask id="Activity_0dv75py" name="Escolher Modalidade">
+      <bpmn:incoming>Flow_15ruk9h</bpmn:incoming>
+      <bpmn:outgoing>Flow_1pbey2g</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_1sk4fef" name="Escolher Especialidade">
+      <bpmn:incoming>Flow_1pbey2g</bpmn:incoming>
+      <bpmn:outgoing>Flow_0y9df04</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_1o0ahcj" name="Escolher Local">
+      <bpmn:incoming>Flow_0y9df04</bpmn:incoming>
+      <bpmn:outgoing>Flow_0lgrxi9</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0ostvml" name="Escolher Médico">
+      <bpmn:incoming>Flow_0lgrxi9</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ep3qvj</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0vhuo2l" name="Escolher Horário">
+      <bpmn:incoming>Flow_1ep3qvj</bpmn:incoming>
+      <bpmn:outgoing>Flow_13e8e1o</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="ConsultProcess">
+      <bpmndi:BPMNEdge id="Flow_15ruk9h_di" bpmnElement="Flow_15ruk9h">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pbey2g_di" bpmnElement="Flow_1pbey2g">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="430" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0y9df04_di" bpmnElement="Flow_0y9df04">
+        <di:waypoint x="530" y="117" />
+        <di:waypoint x="590" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lgrxi9_di" bpmnElement="Flow_0lgrxi9">
+        <di:waypoint x="690" y="117" />
+        <di:waypoint x="750" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ep3qvj_di" bpmnElement="Flow_1ep3qvj">
+        <di:waypoint x="850" y="117" />
+        <di:waypoint x="910" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13e8e1o_di" bpmnElement="Flow_13e8e1o">
+        <di:waypoint x="1010" y="117" />
+        <di:waypoint x="1072" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_08rj28n_di" bpmnElement="Event_08rj28n">
+        <dc:Bounds x="1072" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1051" y="202" width="78" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ybgymy_di" bpmnElement="Activity_0dv75py">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1p48d1i_di" bpmnElement="Activity_1sk4fef">
+        <dc:Bounds x="430" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ax10kj_di" bpmnElement="Activity_1o0ahcj">
+        <dc:Bounds x="590" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1l1b5oy_di" bpmnElement="Activity_0ostvml">
+        <dc:Bounds x="750" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_14l6tdy_di" bpmnElement="Activity_0vhuo2l">
+        <dc:Bounds x="910" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
