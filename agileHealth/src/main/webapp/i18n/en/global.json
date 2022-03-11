@@ -13,7 +13,9 @@
         "taskInstance": "All Tasks",
         "myCandidateTasks": "My Tasks",
         "consult": "Consult",
+        "taskBookAppointment": "Task Book Appointment",
         "consultProcess": "Consult Process",
+        "doctor": "Doctor",
         "consultStartForm": "Consult Start Form",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },

@@ -1,0 +1,35 @@
+{
+  "fields": [
+    {
+      "fieldName": "mode",
+      "fieldType": "String",
+      "fieldReadOnly": true
+    },
+    {
+      "fieldName": "medicalSpecialty",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "local",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [],
+  "entityType": "user-task-form",
+  "processBpmnId": "ConsultProcess",
+  "processEntityName": "ConsultProcess",
+  "taskBpmnId": "TaskBookAppointment",
+  "domainEntityName": "Consult",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "skipFakeData": true,
+  "name": "TaskBookAppointment",
+  "changelogDate": "20210401000004"
+}

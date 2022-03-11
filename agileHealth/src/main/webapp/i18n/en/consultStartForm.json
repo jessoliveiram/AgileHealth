@@ -19,7 +19,10 @@
       },
       "id": "ID",
       "mode": "Mode",
-      "medicalSpecialty": "Medical Specialty"
+      "medicalSpecialty": "Medical Specialty",
+      "local": "Local",
+      "date": "Date",
+      "doctor": "Doctor"
     }
   }
 }

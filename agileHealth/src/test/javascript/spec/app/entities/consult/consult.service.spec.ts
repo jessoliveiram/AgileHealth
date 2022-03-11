@@ -33,7 +33,7 @@ describe('Service Tests', () => {
     beforeEach(() => {
       service = new ConsultService();
       currentDate = new Date();
-      elemDefault = new Consult(0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', currentDate);
+      elemDefault = new Consult(0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', currentDate);
     });
 
     describe('Service methods', () => {
@@ -67,7 +67,6 @@ describe('Service Tests', () => {
             mode: 'BBBBBB',
             medicalSpecialty: 'BBBBBB',
             local: 'BBBBBB',
-            doctorName: 'BBBBBB',
             date: dayjs(currentDate).format(DATE_FORMAT),
           },
           elemDefault

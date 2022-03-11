@@ -42,9 +42,6 @@ class ConsultResourceIT {
     private static final String DEFAULT_LOCAL = "AAAAAAAAAA";
     private static final String UPDATED_LOCAL = "BBBBBBBBBB";
 
-    private static final String DEFAULT_DOCTOR_NAME = "AAAAAAAAAA";
-    private static final String UPDATED_DOCTOR_NAME = "BBBBBBBBBB";
-
     private static final LocalDate DEFAULT_DATE = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_DATE = LocalDate.now(ZoneId.systemDefault());
 
@@ -79,7 +76,6 @@ class ConsultResourceIT {
             .mode(DEFAULT_MODE)
             .medicalSpecialty(DEFAULT_MEDICAL_SPECIALTY)
             .local(DEFAULT_LOCAL)
-            .doctorName(DEFAULT_DOCTOR_NAME)
             .date(DEFAULT_DATE);
         return consult;
     }
@@ -95,7 +91,6 @@ class ConsultResourceIT {
             .mode(UPDATED_MODE)
             .medicalSpecialty(UPDATED_MEDICAL_SPECIALTY)
             .local(UPDATED_LOCAL)
-            .doctorName(UPDATED_DOCTOR_NAME)
             .date(UPDATED_DATE);
         return consult;
     }
@@ -120,7 +115,6 @@ class ConsultResourceIT {
             .andExpect(jsonPath("$.[*].mode").value(hasItem(DEFAULT_MODE)))
             .andExpect(jsonPath("$.[*].medicalSpecialty").value(hasItem(DEFAULT_MEDICAL_SPECIALTY)))
             .andExpect(jsonPath("$.[*].local").value(hasItem(DEFAULT_LOCAL)))
-            .andExpect(jsonPath("$.[*].doctorName").value(hasItem(DEFAULT_DOCTOR_NAME)))
             .andExpect(jsonPath("$.[*].date").value(hasItem(DEFAULT_DATE.toString())));
     }
 
@@ -139,7 +133,6 @@ class ConsultResourceIT {
             .andExpect(jsonPath("$.mode").value(DEFAULT_MODE))
             .andExpect(jsonPath("$.medicalSpecialty").value(DEFAULT_MEDICAL_SPECIALTY))
             .andExpect(jsonPath("$.local").value(DEFAULT_LOCAL))
-            .andExpect(jsonPath("$.doctorName").value(DEFAULT_DOCTOR_NAME))
             .andExpect(jsonPath("$.date").value(DEFAULT_DATE.toString()));
     }
 

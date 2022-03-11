@@ -17,9 +17,9 @@ public class ConsultDTO implements Serializable {
 
     private String local;
 
-    private String doctorName;
-
     private LocalDate date;
+
+    private DoctorDTO doctor;
 
     public Long getId() {
         return id;
@@ -53,20 +53,20 @@ public class ConsultDTO implements Serializable {
         this.local = local;
     }
 
-    public String getDoctorName() {
-        return doctorName;
-    }
-
-    public void setDoctorName(String doctorName) {
-        this.doctorName = doctorName;
-    }
-
     public LocalDate getDate() {
         return date;
     }
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public DoctorDTO getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(DoctorDTO doctor) {
+        this.doctor = doctor;
     }
 
     @Override
@@ -98,8 +98,8 @@ public class ConsultDTO implements Serializable {
             ", mode='" + getMode() + "'" +
             ", medicalSpecialty='" + getMedicalSpecialty() + "'" +
             ", local='" + getLocal() + "'" +
-            ", doctorName='" + getDoctorName() + "'" +
             ", date='" + getDate() + "'" +
+            ", doctor=" + getDoctor() +
             "}";
     }
 }

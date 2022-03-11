@@ -21,8 +21,8 @@
             <th scope="row"><span v-text="$t('agileHealthApp.consult.mode')">Mode</span></th>
             <th scope="row"><span v-text="$t('agileHealthApp.consult.medicalSpecialty')">Medical Specialty</span></th>
             <th scope="row"><span v-text="$t('agileHealthApp.consult.local')">Local</span></th>
-            <th scope="row"><span v-text="$t('agileHealthApp.consult.doctorName')">Doctor Name</span></th>
             <th scope="row"><span v-text="$t('agileHealthApp.consult.date')">Date</span></th>
+            <th scope="row"><span v-text="$t('agileHealthApp.consult.doctor')">Doctor</span></th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -34,8 +34,12 @@
             <td>{{ consult.mode }}</td>
             <td>{{ consult.medicalSpecialty }}</td>
             <td>{{ consult.local }}</td>
-            <td>{{ consult.doctorName }}</td>
             <td>{{ consult.date }}</td>
+            <td>
+              <div v-if="consult.doctor">
+                <router-link :to="{ name: 'DoctorView', params: { doctorId: consult.doctor.id } }">{{ consult.doctor.name }}</router-link>
+              </div>
+            </td>
             <td class="text-right">
               <div class="btn-group">
                 <router-link :to="{ name: 'ConsultView', params: { consultId: consult.id } }" custom v-slot="{ navigate }">

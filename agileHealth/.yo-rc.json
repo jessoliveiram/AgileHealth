@@ -26,7 +26,7 @@
     "dtoSuffix": "DTO",
     "testFrameworks": [],
     "pages": [],
-    "creationTimestamp": 1644807972341,
+    "creationTimestamp": 1646969714735,
     "serviceDiscoveryType": false,
     "reactive": false,
     "authenticationType": "jwt",
@@ -35,8 +35,8 @@
     "cacheProvider": "ehcache",
     "enableHibernateCache": true,
     "databaseType": "sql",
-    "devDatabaseType": "h2Memory",
-    "prodDatabaseType": "mysql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
     "buildTool": "maven",
     "serverSideOptions": [],
     "websocket": false,
@@ -47,12 +47,12 @@
     "withAdminUi": true,
     "clientTheme": "none",
     "enableTranslation": true,
-    "nativeLanguage": "pt-br",
+    "nativeLanguage": "en",
     "packageFolder": "br/ufrj/agilehealth",
-    "jwtSecretKey": "ODdiMjI2N2E5YmIyMDZkMWQ2M2NmMTFhNDhkMGI3NTk4ZjVlNTBhM2NmNjZlMTI4YzY5YjZiZGI5ZTE0YmIxNDJiYTRmMTc2OGFiYmJkMGQwYmFhNmU0ZmFlNjk5MTQ5ZjMwOGNhYmNlMjcwNWNhY2QyZTRmNjNlNzE0YjNjMDM=",
+    "jwtSecretKey": "NzgxNThkNmFmN2M4MGZkODQ0M2EzN2RmZjFhMDFmYjJjMWU0OGNiYTRjZjY2OTgwYWU4Yzk5YTVmYWQxMzcyZjkzZTc5NDM3ODRmNjIyZWFiMTA3ODZhNzVmMDljNGFmZDNjMTI0YjRjNGMzZGQ2NTFjMDgzNTYwZmY1YTU2Nzk=",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["pt-br", "en"],
-    "entities": ["Consult"]
+    "languages": ["en"],
+    "entities": ["Consult", "Doctor"]
   }
 }

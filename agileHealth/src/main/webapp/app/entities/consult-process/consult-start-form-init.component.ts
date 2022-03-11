@@ -1,5 +1,8 @@
 import { Component, Vue, Inject } from 'vue-property-decorator';
 
+import DoctorService from '@/entities/doctor/doctor.service'; //
+import { IDoctor } from '@/shared/model/doctor.model';
+
 import { IConsultProcess, ConsultProcess } from '@/shared/model/consult-process.model';
 
 import { ProcessInstance, ProcessDefinitionService } from 'akip-vue-community';
@@ -12,6 +15,8 @@ const validations: any = {
     consult: {
       mode: {},
       medicalSpecialty: {},
+      local: {},
+      date: {},
     },
   },
 };
@@ -26,6 +31,10 @@ export default class ConsultStartFormInitComponent extends Vue {
 
   public bpmnProcessDefinitionId: string = 'ConsultProcess';
   public consultProcess: IConsultProcess = new ConsultProcess();
+
+  @Inject('doctorService') private doctorService: () => DoctorService;
+
+  public doctors: IDoctor[] = [];
 
   public isSaving = false;
   public currentLanguage = '';
@@ -79,5 +88,10 @@ export default class ConsultStartFormInitComponent extends Vue {
       this.consultProcess.processInstance = new ProcessInstance();
       this.consultProcess.processInstance.processDefinition = res;
     });
+    this.doctorService()
+      .retrieve()
+      .then(res => {
+        this.doctors = res.data;
+      });
   }
 }

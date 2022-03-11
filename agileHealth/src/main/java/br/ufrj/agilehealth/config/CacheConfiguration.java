@@ -50,6 +50,7 @@ public class CacheConfiguration {
             createCache(cm, br.ufrj.agilehealth.domain.User.class.getName() + ".authorities");
             createCache(cm, br.ufrj.agilehealth.domain.Consult.class.getName());
             createCache(cm, br.ufrj.agilehealth.domain.ConsultProcess.class.getName());
+            createCache(cm, br.ufrj.agilehealth.domain.Doctor.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

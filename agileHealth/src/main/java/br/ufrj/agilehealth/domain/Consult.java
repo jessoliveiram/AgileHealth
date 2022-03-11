@@ -17,7 +17,8 @@ public class Consult implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
     @Column(name = "mode")
@@ -29,11 +30,11 @@ public class Consult implements Serializable {
     @Column(name = "local")
     private String local;
 
-    @Column(name = "doctor_name")
-    private String doctorName;
-
     @Column(name = "date")
     private LocalDate date;
+
+    @ManyToOne
+    private Doctor doctor;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -88,19 +89,6 @@ public class Consult implements Serializable {
         this.local = local;
     }
 
-    public String getDoctorName() {
-        return this.doctorName;
-    }
-
-    public Consult doctorName(String doctorName) {
-        this.doctorName = doctorName;
-        return this;
-    }
-
-    public void setDoctorName(String doctorName) {
-        this.doctorName = doctorName;
-    }
-
     public LocalDate getDate() {
         return this.date;
     }
@@ -112,6 +100,19 @@ public class Consult implements Serializable {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public Doctor getDoctor() {
+        return this.doctor;
+    }
+
+    public Consult doctor(Doctor doctor) {
+        this.setDoctor(doctor);
+        return this;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -141,7 +142,6 @@ public class Consult implements Serializable {
             ", mode='" + getMode() + "'" +
             ", medicalSpecialty='" + getMedicalSpecialty() + "'" +
             ", local='" + getLocal() + "'" +
-            ", doctorName='" + getDoctorName() + "'" +
             ", date='" + getDate() + "'" +
             "}";
     }

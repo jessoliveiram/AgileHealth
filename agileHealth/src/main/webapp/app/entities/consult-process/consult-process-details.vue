@@ -58,20 +58,6 @@
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('agileHealthApp.consultProcess.doctorName')">doctorName</label>
-                  <input
-                    readonly
-                    type="text"
-                    class="form-control"
-                    name="doctorName"
-                    id="consult-doctorName"
-                    data-cy="doctorName"
-                    v-model="consultProcess.consult.doctorName"
-                  />
-                </div>
-              </div>
-              <div class="card-body py-0">
-                <div class="form-group">
                   <label class="form-control-label" v-text="$t('agileHealthApp.consultProcess.date')">date</label>
                   <input
                     readonly
@@ -82,6 +68,24 @@
                     data-cy="date"
                     v-model="consultProcess.consult.date"
                   />
+                </div>
+              </div>
+              <div class="card-body py-0">
+                <div class="form-group">
+                  <label class="form-control-label" v-text="$t('agileHealthApp.consultProcess.doctor')" for="consult-process-doctor"
+                    >Doctor</label
+                  >
+                  <input
+                    v-if="consultProcess.consult.doctor"
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="doctor"
+                    id="consult-doctor"
+                    data-cy="doctor"
+                    :value="consultProcess.consult.doctor.name"
+                  />
+                  <input v-else readonly type="text" class="form-control" name="doctor" id="consult-doctor" data-cy="doctor" value="" />
                 </div>
               </div>
             </div>

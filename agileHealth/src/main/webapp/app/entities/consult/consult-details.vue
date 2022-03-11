@@ -25,16 +25,18 @@
             <span>{{ consult.local }}</span>
           </dd>
           <dt>
-            <span v-text="$t('agileHealthApp.consult.doctorName')">Doctor Name</span>
-          </dt>
-          <dd>
-            <span>{{ consult.doctorName }}</span>
-          </dd>
-          <dt>
             <span v-text="$t('agileHealthApp.consult.date')">Date</span>
           </dt>
           <dd>
             <span>{{ consult.date }}</span>
+          </dd>
+          <dt>
+            <span v-text="$t('agileHealthApp.consult.doctor')">Doctor</span>
+          </dt>
+          <dd>
+            <div v-if="consult.doctor">
+              <router-link :to="{ name: 'DoctorView', params: { doctorId: consult.doctor.id } }">{{ consult.doctor.name }}</router-link>
+            </div>
           </dd>
         </dl>
         <button type="submit" v-on:click.prevent="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">

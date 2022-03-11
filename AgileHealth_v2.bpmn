@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1fhsz3q" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:process id="ConsultProcess" name="Consult Process" isExecutable="true" camunda:versionTag="0.0.1">
+    <bpmn:startEvent id="Event_0atdryi">
+      <bpmn:outgoing>Flow_1d4bsj2</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="Activity_1rqof3n" name="Marcar consulta" camunda:formKey="">
+      <bpmn:incoming>Flow_1d4bsj2</bpmn:incoming>
+      <bpmn:incoming>Flow_0pcu2ni</bpmn:incoming>
+      <bpmn:outgoing>Flow_0uroahf</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Activity_0q8s0s6" name="Confirmar Consulta">
+      <bpmn:incoming>Flow_0uroahf</bpmn:incoming>
+      <bpmn:outgoing>Flow_1fgr070</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_1soh007" name="Envia mensagem confirmando consulta">
+      <bpmn:incoming>Flow_00za6gk</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_14x6zya" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0uroahf" sourceRef="Activity_1rqof3n" targetRef="Activity_0q8s0s6" />
+    <bpmn:sequenceFlow id="Flow_1d4bsj2" sourceRef="Event_0atdryi" targetRef="Activity_1rqof3n" />
+    <bpmn:exclusiveGateway id="Gateway_0vfl19n">
+      <bpmn:incoming>Flow_1fgr070</bpmn:incoming>
+      <bpmn:outgoing>Flow_0pcu2ni</bpmn:outgoing>
+      <bpmn:outgoing>Flow_00za6gk</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1fgr070" sourceRef="Activity_0q8s0s6" targetRef="Gateway_0vfl19n" />
+    <bpmn:sequenceFlow id="Flow_0pcu2ni" name="Horário indisponível" sourceRef="Gateway_0vfl19n" targetRef="Activity_1rqof3n" />
+    <bpmn:sequenceFlow id="Flow_00za6gk" name="Consulta agendada com sucesso" sourceRef="Gateway_0vfl19n" targetRef="Event_1soh007" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="ConsultProcess">
+      <bpmndi:BPMNEdge id="Flow_1d4bsj2_di" bpmnElement="Flow_1d4bsj2">
+        <di:waypoint x="188" y="120" />
+        <di:waypoint x="230" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0pcu2ni_di" bpmnElement="Flow_0pcu2ni">
+        <di:waypoint x="580" y="145" />
+        <di:waypoint x="580" y="243" />
+        <di:waypoint x="280" y="243" />
+        <di:waypoint x="280" y="160" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="402" y="209" width="59" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0uroahf_di" bpmnElement="Flow_0uroahf">
+        <di:waypoint x="330" y="120" />
+        <di:waypoint x="390" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fgr070_di" bpmnElement="Flow_1fgr070">
+        <di:waypoint x="490" y="120" />
+        <di:waypoint x="555" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00za6gk_di" bpmnElement="Flow_00za6gk">
+        <di:waypoint x="605" y="120" />
+        <di:waypoint x="792" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="653" y="133" width="73" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0atdryi_di" bpmnElement="Event_0atdryi">
+        <dc:Bounds x="152" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1rqof3n_di" bpmnElement="Activity_1rqof3n">
+        <dc:Bounds x="230" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0q8s0s6_di" bpmnElement="Activity_0q8s0s6">
+        <dc:Bounds x="390" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1soh007_di" bpmnElement="Event_1soh007">
+        <dc:Bounds x="792" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="768" y="145" width="85" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0vfl19n_di" bpmnElement="Gateway_0vfl19n" isMarkerVisible="true">
+        <dc:Bounds x="555" y="95" width="50" height="50" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

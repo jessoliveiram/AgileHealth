@@ -1,0 +1,27 @@
+{
+  "agileHealthApp": {
+    "taskBookAppointment": {
+      "home": {
+        "title": "Task Book Appointments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Task Book Appointment",
+        "createOrEditLabel": "Create or edit a Task Book Appointment",
+        "notFound": "No Task Book Appointments found"
+      },
+      "created": "A new Task Book Appointment is created with identifier {{ param }}",
+      "updated": "A Task Book Appointment is updated with identifier {{ param }}",
+      "deleted": "A Task Book Appointment is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Task Book Appointment {{ id }}?"
+      },
+      "detail": {
+        "title": "Task Book Appointment"
+      },
+      "id": "ID",
+      "mode": "Mode",
+      "medicalSpecialty": "Medical Specialty",
+      "local": "Local",
+      "date": "Date"
+    }
+  }
+}

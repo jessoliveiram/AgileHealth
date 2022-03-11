@@ -13,8 +13,8 @@
       "mode": "Mode",
       "medicalSpecialty": "Medical Specialty",
       "local": "Local",
-      "doctorName": "Doctor Name",
-      "date": "Date"
+      "date": "Date",
+      "doctor": "Doctor"
     }
   }
 }
